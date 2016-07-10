@@ -1,11 +1,12 @@
 class ApplicationController < ActionController::API
-  before_filter :authentice_user_from_token!
+  include ActionController::HttpAuthentication::Token::ControllerMethods
+  before_filter :authenticate_user_from_token!
 
   before_filter :authenticate_user!
 
   private
 
-    def authentice_user_from_token!
+    def authenticate_user_from_token!
       authenticate_with_http_token do |token, options|
         user_email = options[:email].presence
         user = user_email && User.find_by_email(user_email)
