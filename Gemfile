@@ -10,3 +10,5 @@ gem 'spring', :group => :development
 gem 'pg'
 
 gem 'devise'
+
+gem 'rack-cors', :require => 'rack/cors'
