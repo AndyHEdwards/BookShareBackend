@@ -8,3 +8,5 @@ gem 'rails-api'
 gem 'spring', :group => :development
 
 gem 'pg'
+
+gem 'devise'
