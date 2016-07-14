@@ -11,4 +11,8 @@ gem 'pg'
 
 gem 'devise'
 
+gem 'bcrypt'
+
 gem 'knock'
+
+gem 'rack-cors', :require => 'rack/cors'
